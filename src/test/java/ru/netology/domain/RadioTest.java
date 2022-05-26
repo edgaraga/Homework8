@@ -29,6 +29,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     void negativeUpSetRadioStation() {
         Radio rad = new Radio();
@@ -67,6 +68,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     void prevRadioStation() {
         Radio rad = new Radio();
@@ -180,6 +182,7 @@ public class RadioTest {
 
         Assertions.assertEquals(actual, expected);
     }
+
     @Test
     void negativeLargeDownSetRadioStation() {
         Radio rad = new Radio();
@@ -192,6 +195,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     void negativeLargeUpSetRadioStation() {
         Radio rad = new Radio();
@@ -204,6 +208,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     void negativeLargeDownSetCurrentVolume() {
         Radio rad = new Radio();
@@ -216,6 +221,7 @@ public class RadioTest {
 
         Assertions.assertEquals(actual, expected);
     }
+
     @Test
     void negativeLargeUpSetCurrentVolume() {
         Radio rad = new Radio();
