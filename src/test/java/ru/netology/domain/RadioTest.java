@@ -95,7 +95,7 @@ public class RadioTest {
     void nextRadioStation1() {
         Radio rad = new Radio();
 
-        rad.setCurrentRadioStation(-1);
+        rad.setCurrentRadioStation(0);
         rad.nextRadioStation();
 
         int actual = rad.getCurrentRadioStation();
