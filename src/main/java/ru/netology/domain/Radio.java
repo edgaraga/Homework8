@@ -3,6 +3,7 @@ package ru.netology.domain;
 public class Radio {
 
     private int currentRadioStation;
+    private int currentVolume;
 
     public void setCurrentRadioStation(int currentRadioStation) {
         if (currentRadioStation < 0) {
@@ -14,30 +15,6 @@ public class Radio {
         this.currentRadioStation = currentRadioStation;
     }
 
-    public void nextRadioStation() {
-        if (currentRadioStation < 9) {
-            currentRadioStation = currentRadioStation + 1;
-        }
-        if (currentRadioStation == 9) {
-            currentRadioStation = 0;
-        }
-    }
-
-    public void prevRadioStation() {
-        if (currentRadioStation > 0) {
-            currentRadioStation = currentRadioStation - 1;
-        }
-        if (currentRadioStation == 0) {
-            currentRadioStation = 9;
-        }
-    }
-
-    public int getCurrentRadioStation() {
-        return currentRadioStation;
-    }
-
-    private int currentVolume;
-
     public void setCurrentVolume(int currentVolume) {
         if (currentVolume < 0) {
             return;
@@ -48,29 +25,36 @@ public class Radio {
         this.currentVolume = currentVolume;
     }
 
+    public void nextRadioStation() {
+        if (currentRadioStation < 9) {
+            currentRadioStation = currentRadioStation + 1;
+        } else currentRadioStation = 0;
+    }
+
     public void increaseVolume() {
         if (currentVolume < 10) {
             currentVolume = currentVolume + 1;
-        }
-        if (currentVolume == 10) {
-            return;
-        }
+        } else currentVolume = 10;
+    }
 
+
+    public void prevRadioStation() {
+        if (currentRadioStation > 0) {
+            currentRadioStation = currentRadioStation - 1;
+        } else currentRadioStation = 9;
     }
 
     public void decreaseVolume() {
         if (currentVolume > 0) {
             currentVolume = currentVolume - 1;
-        }
-        if (currentVolume == 0) {
-            return;
-        }
+        } else currentVolume = 0;
+    }
 
+    public int getCurrentRadioStation() {
+        return currentRadioStation;
     }
 
     public int getCurrentVolume() {
         return currentVolume;
     }
-
-
 }
