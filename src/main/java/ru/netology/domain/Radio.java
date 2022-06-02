@@ -1,5 +1,8 @@
 package ru.netology.domain;
 
+import lombok.Data;
+
+@Data
 public class Radio {
 
     private int numberOfRadioStations = 10;
@@ -70,6 +73,7 @@ public class Radio {
 
     }
 
+ /*
     public int getCurrentRadioStation() {
         return currentRadioStation;
     }
@@ -82,4 +86,6 @@ public class Radio {
     public int getNumberOfRadioStations() {
         return numberOfRadioStations;
     }
+ */
+
 }
